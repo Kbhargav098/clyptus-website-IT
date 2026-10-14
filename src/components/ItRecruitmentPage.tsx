@@ -370,9 +370,6 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-mono font-extrabold text-sky-600 uppercase tracking-widest block mb-2">
-              HIRING TEAM DEMAND LIST
-            </span>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-4">
               Roles We Recruit For
             </h2>
@@ -451,9 +448,6 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-10 bg-slate-100/70 border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono font-extrabold text-indigo-600 uppercase tracking-widest block mb-2">
-              TAILORED DEPLOYMENT
-            </span>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900">
               Flexible Delivery Models
             </h2>
