@@ -390,13 +390,10 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
                 className="p-7 rounded-3xl bg-white border border-slate-200/90 hover:border-sky-500/60 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="mb-4">
                     <h3 className="text-xl font-extrabold text-slate-900 group-hover:text-sky-600 transition-colors">
                       {item.area}
                     </h3>
-                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-extrabold bg-sky-50 text-sky-700 border border-sky-100 uppercase tracking-wider shrink-0">
-                      {item.badge}
-                    </span>
                   </div>
 
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
@@ -469,13 +466,10 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
                 className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="mb-4">
                     <h3 className="text-2xl font-black text-slate-900 group-hover:text-sky-600 transition-colors">
                       {model.title}
                     </h3>
-                    <span className="px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-mono text-[10px] font-extrabold uppercase">
-                      {model.badge}
-                    </span>
                   </div>
 
                   <p className="text-sm text-slate-600 leading-relaxed font-medium mb-6">

@@ -202,9 +202,9 @@ export const ArcCarouselStaffingServices: React.FC<ArcCarouselProps> = () => {
                         : 'bg-white/95 border border-slate-200/90 shadow-md'
                     }`}
                   >
-                    {/* Top Header & Badge */}
+                    {/* Top Header */}
                     <div>
-                      <div className="flex items-center justify-between mb-5">
+                      <div className="mb-5">
                         <div
                           className={`w-13 h-13 rounded-2xl flex items-center justify-center transition-all duration-300 ${
                             isClosestCenter
@@ -214,16 +214,6 @@ export const ArcCarouselStaffingServices: React.FC<ArcCarouselProps> = () => {
                         >
                           <IconComp className="w-6 h-6 stroke-[2]" />
                         </div>
-
-                        <span
-                          className={`px-3 py-1 rounded-full text-[10px] font-mono font-extrabold uppercase tracking-wider ${
-                            isClosestCenter
-                              ? 'bg-sky-100 text-sky-700 border border-sky-200'
-                              : 'bg-slate-100 text-slate-500'
-                          }`}
-                        >
-                          {srv.badge}
-                        </span>
                       </div>
 
                       {/* Tagline */}
