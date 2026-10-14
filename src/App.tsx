@@ -53,6 +53,7 @@ export function App() {
       else if (hash === 'hr-policies' || hash === 'hrpolicies') setCurrentPage('HR Policies');
       else if (hash === 'sap') setCurrentPage('SAP');
       else if (hash === 'ai') setCurrentPage('AI');
+      else if (hash === 'recruiting' || hash === 'it-recruiting') setCurrentPage('Recruiting');
     };
     handleHash();
     window.addEventListener('hashchange', handleHash);
