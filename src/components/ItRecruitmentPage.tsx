@@ -3,18 +3,13 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArcCarouselStaffingServices } from './ArcCarouselStaffingServices';
 import { ScreeningProcessCarousel } from './ScreeningProcessCarousel';
 import {
-  Users,
-  Globe,
   ShieldCheck,
   ArrowRight,
   ChevronDown,
   CheckCircle2,
-  Building2,
   Search,
   UserCheck,
-  Clock,
-  ExternalLink,
-  X
+  Clock
 } from 'lucide-react';
 import { GLSLHills } from '@/components/ui/glsl-hills';
 
@@ -81,7 +76,6 @@ const ScrollAnimatedHeroTitle: React.FC = () => {
 
 export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigateContact }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-  const [showCareersModal, setShowCareersModal] = useState<boolean>(false);
 
   const handleContactClick = () => {
     if (onNavigateContact) {
@@ -303,30 +297,12 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             <div className="lg:col-span-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-100 font-mono text-xs font-extrabold uppercase mb-4">
-                OVERVIEW & SCOPE
-              </div>
               <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 Accelerated Hiring for SAP, ERP & Senior IT Leaders
               </h2>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium mb-6">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
                 Clyptus helps enterprises hire SAP and ERP specialists, IT engineers and senior leaders. We run permanent hiring, contract staffing, contract-to-hire and full recruitment process outsourcing, with delivery from India and offices in the UAE and USA.
               </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs font-bold text-slate-700 border-t border-slate-100 pt-6">
-                <div className="flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-sky-600" />
-                  <span>Global Delivery from India</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Building2 className="w-4 h-4 text-sky-600" />
-                  <span>Offices in UAE & USA</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-sky-600" />
-                  <span>Architect-Level Vetting</span>
-                </div>
-              </div>
             </div>
 
             <div className="lg:col-span-4 bg-gradient-to-br from-sky-50/60 via-white to-indigo-50/40 border border-sky-100/90 text-slate-900 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-md hover:shadow-xl transition-all">
@@ -594,72 +570,6 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
         </div>
       </section>
 
-
-      {/* ---------------------------------------------------- */}
-      {/* JOB SEEKER / CAREERS BOTTOM FOOTER BANNER            */}
-      {/* ---------------------------------------------------- */}
-      <section className="w-full bg-slate-900 text-slate-400 py-8 px-4 text-center border-t border-slate-800">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
-          <div className="text-left">
-            <span className="text-white font-bold block mb-0.5">Are you a job seeker looking for opportunities?</span>
-            <span>This page is for companies looking to hire talent. Job candidates should visit our careers portal.</span>
-          </div>
-
-          <button
-            onClick={() => setShowCareersModal(true)}
-            className="px-5 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-sky-400 hover:text-sky-300 font-bold tracking-wider transition-colors border border-slate-700 whitespace-nowrap flex items-center gap-2"
-          >
-            <span>Visit /careers</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      </section>
-
-
-      {/* ---------------------------------------------------- */}
-      {/* CAREERS MODAL FOR JOB SEEKERS                        */}
-      {/* ---------------------------------------------------- */}
-      {showCareersModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="relative w-full max-w-md bg-white text-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200">
-            <button
-              onClick={() => setShowCareersModal(false)}
-              className="absolute top-4 right-4 p-2 rounded-full text-slate-400 hover:text-slate-900 transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center mb-4">
-              <Users className="w-6 h-6" />
-            </div>
-
-            <h3 className="text-xl font-black text-slate-900 mb-2">Looking for a Job at Clyptus?</h3>
-            <p className="text-xs text-slate-600 leading-relaxed font-medium mb-6">
-              Welcome job seeker! This main page is intended for corporate clients looking to hire talent. To explore open career opportunities and submit your CV, please click below to reach our recruitment team.
-            </p>
-
-            <div className="flex flex-col gap-3">
-              <button
-                onClick={() => {
-                  setShowCareersModal(false);
-                  handleContactClick();
-                }}
-                className="w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-sky-600 transition-colors flex items-center justify-center gap-2"
-              >
-                <span>Submit CV / Contact HR</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-
-              <button
-                onClick={() => setShowCareersModal(false)}
-                className="w-full py-2.5 text-xs text-slate-500 font-bold hover:text-slate-900"
-              >
-                Return to Hiring Page
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );

@@ -7,8 +7,7 @@ import {
   Layers, 
   Globe, 
   TrendingUp, 
-  FileCheck, 
-  Sparkles
+  FileCheck
 } from 'lucide-react';
 
 export interface ServiceItem {
@@ -139,12 +138,6 @@ export const ArcCarouselStaffingServices: React.FC<ArcCarouselProps> = () => {
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto z-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-sky-700 shadow-xs mb-3">
-            <Sparkles className="w-4 h-4 text-sky-600 animate-pulse" />
-            <span className="text-xs font-mono font-extrabold tracking-widest uppercase text-sky-700">
-              SCROLL-DRIVEN 3D ARC CAROUSEL
-            </span>
-          </div>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-2">
             Recruitment & Staffing Services
           </h2>
