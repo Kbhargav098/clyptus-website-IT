@@ -9,9 +9,7 @@ import {
   CheckCircle2,
   Search,
   UserCheck,
-  Clock,
-  Award,
-  Globe
+  Clock
 } from 'lucide-react';
 import { GLSLHills } from '@/components/ui/glsl-hills';
 
@@ -268,22 +266,6 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
         </div>
 
         <div className="relative max-w-5xl mx-auto flex flex-col items-center text-center my-auto">
-
-          {/* Practice Highlights (SAP Header Style) */}
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs sm:text-sm font-bold tracking-wide mb-6">
-            <span className="inline-flex items-center gap-2 text-blue-600">
-              <Award className="w-4 h-4 text-blue-600" />
-              <span>250+ SAP &amp; IT Specialists</span>
-            </span>
-            <span className="inline-flex items-center gap-2 text-[#FF7138]">
-              <Clock className="w-4 h-4 text-[#FF7138]" />
-              <span>Rapid Deployment</span>
-            </span>
-            <span className="inline-flex items-center gap-2 text-indigo-600">
-              <Globe className="w-4 h-4 text-indigo-600" />
-              <span>India Hubs, UAE &amp; USA</span>
-            </span>
-          </div>
 
           {/* H1 Main Title (Scroll Triggered Animated Heading) */}
           <ScrollAnimatedHeroTitle />
