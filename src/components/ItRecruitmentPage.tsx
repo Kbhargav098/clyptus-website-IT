@@ -414,31 +414,31 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
       {/* WHO WE HIRE FOR SECTION                              */}
       {/* ---------------------------------------------------- */}
       <section className="py-16 px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto my-4">
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 text-white shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 border border-blue-500/20">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="p-8 sm:p-12 rounded-3xl bg-white text-slate-900 shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 border border-slate-200/90">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 max-w-3xl">
-            <span className="text-xs font-mono font-extrabold text-blue-400 uppercase tracking-widest block mb-2">
+            <span className="text-xs font-mono font-extrabold text-blue-600 uppercase tracking-widest block mb-2">
               CLIENT SPECTRUM
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-white">
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-slate-900">
               Who We{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-orange-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-500">
                 Hire For
               </span>
             </h2>
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
               We recruit for IT services companies, and also for product companies. We hire permanent staff and contract staff for both.
             </p>
           </div>
 
           <div className="relative z-10 flex flex-wrap gap-4 shrink-0">
-            <div className="px-5 py-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-left">
-              <span className="text-xs font-mono font-bold text-blue-300 uppercase block mb-0.5">Engagement Types</span>
-              <span className="text-sm font-extrabold text-white">Permanent & Contract Staffing</span>
+            <div className="px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200/90 text-left">
+              <span className="text-xs font-mono font-bold text-blue-600 uppercase block mb-0.5">Engagement Types</span>
+              <span className="text-sm font-extrabold text-slate-900">Permanent & Contract Staffing</span>
             </div>
-            <div className="px-5 py-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-left">
-              <span className="text-xs font-mono font-bold text-orange-300 uppercase block mb-0.5">Target Enterprises</span>
-              <span className="text-sm font-extrabold text-white">IT Services & Product Companies</span>
+            <div className="px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200/90 text-left">
+              <span className="text-xs font-mono font-bold text-orange-600 uppercase block mb-0.5">Target Enterprises</span>
+              <span className="text-sm font-extrabold text-slate-900">IT Services & Product Companies</span>
             </div>
           </div>
         </div>
