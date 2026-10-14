@@ -254,15 +254,15 @@ export const ItRecruitmentPage: React.FC<ItRecruitmentPageProps> = ({ onNavigate
       {/* ---------------------------------------------------- */}
       {/* HERO SECTION (HOME PAGE COLOUR & GRADIENT SYSTEM)    */}
       {/* ---------------------------------------------------- */}
-      <section className="relative w-full pt-16 pb-20 sm:pt-24 sm:pb-28 px-4 sm:px-6 lg:px-10 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/50 border-b border-slate-200/80 text-slate-900 select-none">
+      <section className="relative w-full min-h-[calc(100vh-68px)] flex flex-col justify-center pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-10 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/50 border-b border-slate-200/80 text-slate-900 select-none">
         {/* Ambient Soft Glows (Home Page Sky & Indigo) */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sky-400/15 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-400/15 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:32px_32px] opacity-15 pointer-events-none" />
 
         {/* 3D Wireframe GLSL Hills Terrain Backdrop */}
-        <div className="absolute inset-0 pointer-events-none opacity-190 mix-blend-multiply overflow-hidden">
-          <GLSLHills width="100%" height="100%" cameraZ={135} speed={0.3} />
+        <div className="absolute inset-0 pointer-events-none mix-blend-multiply overflow-hidden">
+          <GLSLHills width="100%" height="100%" cameraZ={105} cameraY={16} lookAtY={18} speed={0.3} />
         </div>
 
         <div className="relative max-w-5xl mx-auto flex flex-col items-center text-center">

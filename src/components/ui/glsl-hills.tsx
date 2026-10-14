@@ -5,6 +5,8 @@ export interface GLSLHillsProps {
   width?: string | number;
   height?: string | number;
   cameraZ?: number;
+  cameraY?: number;
+  lookAtY?: number;
   planeSize?: number;
   speed?: number;
   className?: string;
@@ -15,6 +17,8 @@ const GLSLHills = ({
   width = '100vw',
   height = '100vh',
   cameraZ = 125,
+  cameraY = 16,
+  lookAtY = 18,
   planeSize = 256,
   speed = 0.5,
   className = '',
@@ -161,8 +165,9 @@ const GLSLHills = ({
               varying vec3 vPosition;
 
               void main(void) {
-                float opacity = (96.0 - length(vPosition)) / 256.0 * 0.6;
-                vec3 color = vec3(0.6);
+                float dist = length(vPosition);
+                float opacity = clamp((145.0 - dist) / 220.0, 0.0, 1.0) * 0.65;
+                vec3 color = vec3(0.55);
                 gl_FragColor = vec4(color, opacity);
               }
             `,
@@ -190,6 +195,7 @@ const GLSLHills = ({
       const height = containerRef.current?.clientHeight || window.innerHeight;
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       renderer.setSize(width, height, false);
     };
 
@@ -204,15 +210,26 @@ const GLSLHills = ({
       animationFrameId = requestAnimationFrame(renderLoop);
     };
 
+    let resizeObserver: ResizeObserver | null = null;
+
     const init = () => {
       const width = containerRef.current?.clientWidth || window.innerWidth;
       const height = containerRef.current?.clientHeight || window.innerHeight;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       renderer.setSize(width, height, false);
       renderer.setClearColor(0x000000, 0);
-      camera.position.set(0, 16, cameraZ);
-      camera.lookAt(new THREE.Vector3(0, 28, 0));
+      camera.position.set(0, cameraY, cameraZ);
+      camera.lookAt(new THREE.Vector3(0, lookAtY, 0));
       scene.add(plane.mesh);
       window.addEventListener('resize', resize);
+
+      if (typeof ResizeObserver !== 'undefined' && containerRef.current) {
+        resizeObserver = new ResizeObserver(() => {
+          resize();
+        });
+        resizeObserver.observe(containerRef.current);
+      }
+
       resize();
       renderLoop();
     };
@@ -220,6 +237,9 @@ const GLSLHills = ({
     init();
 
     return () => {
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
       window.removeEventListener('resize', resize);
       cancelAnimationFrame(animationFrameId);
       renderer.dispose();
@@ -230,7 +250,7 @@ const GLSLHills = ({
         plane.mesh.material.dispose();
       }
     };
-  }, [cameraZ, planeSize, speed]);
+  }, [cameraZ, cameraY, lookAtY, planeSize, speed]);
 
   return (
     <div
